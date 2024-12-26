@@ -1,0 +1,159 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #599fb6; /* Purple background */
+    background-image: url('background.jpg'); /* Path to your image */
+    background-size: cover; /* Ensure the image covers the entire page */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Container Styling */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    background: linear-gradient(to bottom, #87CEEB, #ffffff); /* Sky blue mixed with white */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin: 8px;
+    box-sizing: border-box;
+}
+
+/* Heading Styling */
+.form-heading {
+    text-align: center;
+    margin-bottom: 16px;
+    color: #fff; /* Light text color for the heading */
+    font-size: 24px;
+}
+
+/* Form Box Styling */
+.form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Flexbox for Form Sections */
+.form-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* Section Styling */
+.section {
+    flex: 1 1 calc(50% - 16px);
+    min-width: 280px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 12px;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #87CEEB, #ffffff); /* Sky blue mixed with white */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.9);
+    }
+    60% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Heading Inside Sections */
+h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #333; /* Dark text for better contrast */
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Input/Select/textarea Styling */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Button Styling */
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+button {
+    background-color: #f39c12; /* Warm yellow-orange color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e67e22; /* Darker orange on hover */
+}
+
+/* :active Animation when clicked */
+.section:active {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: bounceIn 0.5s ease;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .form-columns {
+        flex-direction: column;
+    }
+
+    .section {
+        flex: 1 1 100%;
+    }
+}
